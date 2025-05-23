@@ -58,7 +58,7 @@ async def send_question(query, context):
     if index >= len(questions):
         score = context.user_data.get("score", 0)
         await query.edit_message_text("🎉 Викторина окончена! Молодец.")
-await query.edit_message_text(f"Ты набрал {score} из {len(questions)} баллов.")
+        await query.edit_message_text(f"Ты набрал {score} из {len(questions)} баллов.")
         return
 
     q = questions[index]
